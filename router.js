@@ -1,20 +1,18 @@
-const fs = require('fs');
-const LoremIpsum = require('./loremIpsum');
+const renderer = require('./renderer'); 
+const { getLI } = require('./loremIpsum');
 
 const home = (req, res) => {
-    if (req.url === '/') {
-        res.writeHead(200, { 'Content-Type': 'text/plain' });
-        const loremIpsum = new LoremIpsum(paragraphNumber, paragraphLength); 
-        loremIpsum.on('end', textJSON => {
-            console.log(textJSON);
-            const file = fs.readFileSync('./views/index.html', { encoding: 'utf8' });
-            res.write(file);
-            res.end();
-        });
-        loremIpsum.on('error', err => {
-            console.log(err);
-            res.end(); 
-        });
+
+    const LI = new getLI();
+    
+    if (req.url = '/') {
+        res.writeHead(200, { 'Content-Type': 'text/html' });
+        LI.on('end', content => {
+            if (content) {
+                renderer.view('index', content, res);
+                res.end();
+            }
+        }); 
     }
 }; 
 

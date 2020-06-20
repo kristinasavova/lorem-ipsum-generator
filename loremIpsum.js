@@ -1,41 +1,32 @@
-const { EventEmitter } = require('events');
 const https = require('https');
-const http = require('http');
+const EventEmitter = require('events');
 
-class myLoremIpsum extends EventEmitter {}
-const loremIpsum = new myLoremIpsum(); 
+class getLI extends EventEmitter {
 
-const LoremIpsum = (paragraphNumber, paragraphLength) => {
+    request = https.get('https://loripsum.net/api/2/medium/headers', (res) => {
 
-    const request = https.get(`https://loripsum.net/api/${paragraphNumber}/${paragraphLength}`, (res) => {
-        
-        let body = ''; 
-        
+        let content = ''; 
+
         if (res.statusCode !== 200) {
             request.abort();
-            loremIpsum.emit ('error', new Error(`Oops! Error getting Lorem Ipsum! Status Code ${http.STATUS_CODES[res.statusCode]}`));
-        } 
-
-        res.on('data', (chunk) => {
-            body += chunk;
-            myEmitter.emit('data', chunk);
-        });
+            const err = new Error(`Status Code: ${http.STATUS_CODES[res.statusCode]}`); 
+            console.log('Error fetching data!', err);
+        }
         
+        res.on('data', (chunk) => {
+            content += chunk;
+        });
+
         res.on('end', () => {
-            if (res.statusCode === 200) {
-                try {
-                    const text = JSON.parse(body); // parse the data from string to JSON
-                    loremIpsum.emit('end', text);
-                } catch(err) {
-                    loremIpsum.emit('error', err);
-                }
-            }
-        })
-            .on('error', err => {
-                loremIpsum.emit('error', err);
+            this.emit('end', content);
+        });
+
+        res.on('error', (err) => {
+            console.log(err); 
+            this.emit('error', err);
         });
     });
-};
+}
 
-module.exports = LoremIpsum;
+ module.exports.getLI = getLI;
 

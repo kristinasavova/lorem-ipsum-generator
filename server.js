@@ -5,13 +5,14 @@ const { port } = require('./config');
 
 const file = new static.Server('./public');
 
-const server = http.createServer((req, res) => { 
+http.createServer((req, res) => { 
     // req.on('end', () => {
     //     file.serve(req, res);
     // }).resume();
-    router.home(req, res); 
-});
-
-server.listen(() => {
+    router.home(req, res);
+    
+    
+}).listen(port, 'localhost', err => {
+    if (err) throw err; 
     console.log(`Your port is ${port}`);
 });
