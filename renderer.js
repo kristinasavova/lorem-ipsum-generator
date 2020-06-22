@@ -1,8 +1,8 @@
 const fs = require('fs');
 
-const view = (template, value, res) => {
+const view = async (template, value, res) => {
     let file = fs.readFileSync(`./views/${template}.html`, { encoding: 'utf-8'});
-    file = file.replace(/Content/, value);
+    file = file.replace(/Key/, value);
     res.write(file); 
 };
 
