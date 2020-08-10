@@ -1,6 +1,6 @@
 # LOREM IPSUM GENERATOR
 
-A simple Lorem Ipsum Generator site. 
+A simple dynamic site with Node.  
 
 ## Built With
 

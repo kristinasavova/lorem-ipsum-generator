@@ -1,8 +1,151 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Lorem Ipsum Generator</title>  
+        <style type="text/css" media="screen">
+            @import url('https://fonts.googleapis.com/css2?family=Neuton&family=Work+Sans&display=swap');
+        /*-- Normalize CSS --*/
+            html {
+                line-height: 1.15; /* 1 */
+                -webkit-text-size-adjust: 100%; /* 2 */
+            }
+            input {
+                font-family: inherit; /* 1 */
+                font-size: 100%; /* 1 */
+                line-height: 1.15; /* 1 */
+                margin: 0; /* 2 */
+            }
+            input { /* 1 */
+                overflow: visible;
+            }
+            [type="submit"] {
+                -webkit-appearance: button;
+            }
+            [type="submit"]::-moz-focus-inner {
+                border-style: none;
+                padding: 0;
+            }
+            [type="submit"]:-moz-focusring {
+                outline: 1px dotted ButtonText;
+            }
+            [type="checkbox"],
+            [type="radio"] {
+                box-sizing: border-box; /* 1 */
+                padding: 0; /* 2 */
+            }
+            [type="number"]::-webkit-inner-spin-button,
+            [type="number"]::-webkit-outer-spin-button {
+                height: auto;
+            }
+            ::-webkit-file-upload-button {
+            -webkit-appearance: button; /* 1 */
+                font: inherit; /* 2 */
+            }
+        /*-- Base and Layout Rules --*/
+            body {
+                font-family: 'Work Sans', serif;
+                font-size: 18px;
+                line-height: 140%;
+                color: #67595E;
+                max-width: 1200px;
+                margin: 0 auto;
+                padding: .5em 1em;
+            }
+            h1, h2 {
+                font-family: 'Neuton', sans-serif;
+                text-transform: uppercase;
+                text-align: center;
+            }
+            h1 {
+                font-size: 1.44em;
+                line-height: 110%;
+            }
+            h2 {
+                font-size: 1.2em;
+                line-height: 125%;
+            }
+            form {
+                width: 100%;
+                text-align: center;
+            }
+            input {
+                padding: 5px 10px;
+                font-size: 18px;
+                color: #67595E;
+                border: 1px solid #A49393;
+                border-radius: 5px;
+            }
+                input[type="submit"] {
+                    padding: 10px 25px;
+                    border-radius: 10px;
+                    margin: .25em auto .5em auto;
+                    font-size: 18px;
+                    color: #67595E;
+                    background-color: #E8B4B8;
+                    border: none;
+                    box-shadow: 0 0 2px rgba(232, 180, 184, .25);
+                }
+                    input[type="submit"]:hover {
+                        background-color: #EED6D3;
+                        border: none;
+                    }
+            .content-wrapper {
+                border-radius: 15px;
+                padding: .5em 2.5em .75em 2.5em;
+                margin: 1em auto;
+                text-align: left;
+                background-color: rgba(164, 147, 147, .15);
+                font-size: 15px;
+                text-align: justify;
+            }
+            .input-wrapper {
+                margin-bottom: 1em;
+            }
+            .main-label {
+                display: inline-block;
+                padding-bottom: .25em;
+                color: #8F7A7A;
+            }
+            .radio-label {
+                margin: 0 .75em 0 .05em;
+            }
+                .radio-label:last-of-type {
+                    margin-right: 0;
+                }
+            .clearfix::after {
+                content: "";
+                display: table;
+                clear: both;
+            }
+            /*-- Media Queries --*/
+            @media only screen and (min-width: 950px) {
+                    h1 {
+                        font-size: 2.25em;
+                        line-height: 110%;
+                        margin: 1em auto .5em auto;
+                    }
+                    h2 {
+                        font-size: 1.5em;
+                        line-height: 125%;
+                    }
+                    .form-wrapper {
+                        width: 30%;
+                        float: left;
+                    }
+                    .content-wrapper {
+                        width: 60%;
+                        float: right;
+                        margin: 1.5em 0 3em 1em;
+                    }
+                        .content-wrapper h1 {
+                            font-size: 1.44em;
+                        }
+                        .content-wrapper h2 {
+                            font-size: 1.2em;
+                        }
+            }
+        </style>
     </head>
    

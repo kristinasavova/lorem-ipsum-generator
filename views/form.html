@@ -1,18 +1,26 @@
-<body>
+<body class="clearfix">
     <h1>Lorem Ipsum Generator</h1>
-    <form action="/" method="POST">
-        <h2>Lorem Ipsum Options</h2>
-        <label for="p_number">Number of Paragraphs</label>
-        <input type="number" id="p_number" name="p_number" required><br>
-        <label for="p_length">Paragraph Length</label>
-        <input type="radio" id="short" name="p_length" value="short" required>
-        <label for="short">Short</label> 
-        <input type="radio" id="medium" name="p_length" value="medium" required>
-        <label for="medium">Medium</label>
-        <input type="radio" id="long" name="p_length" value="long" required>
-        <label for="long">Long</label><br>
-        <input type="checkbox" id="headers" name="headers" value="headers">
-        <label for="headers">With Headers</label><br>
-        <input type="submit" value="Submit">
-    </form>
+    <div class="form-wrapper">
+        <form action="/" method="POST">
+            <h2>Lorem Ipsum Options</h2>
+            <div class="input-wrapper">
+                <label for="p_number" class="main-label">Number of Paragraphs</label><br>
+                <input type="number" id="p_number" name="p_number" required>
+            </div>
+            <div class="input-wrapper">
+                <label for="p_length" class="main-label">Paragraph Length</label><br>
+                <input type="radio" id="short" name="p_length" value="short" required>
+                <label for="short" class="radio-label">Short</label> 
+                <input type="radio" id="medium" name="p_length" value="medium" required>
+                <label for="medium" class="radio-label">Medium</label>
+                <input type="radio" id="long" name="p_length" value="long" required>
+                <label for="long" class="radio-label">Long</label>
+            </div>
+            <div class="input-wrapper">
+                <input type="checkbox" id="headers" name="headers" value="headers">
+                <label for="headers">With Headers</label>
+            </div>
+            <input type="submit" value="GO!">
+        </form>
+    </div>
     
