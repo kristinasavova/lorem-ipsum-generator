@@ -8,11 +8,9 @@
     "start": "node server.js"
   },
   "engines": {
-		"node": "12.x"
-	},
+    "node": "12.x"
+  },
   "author": "Kristina Savova",
   "license": "MIT",
-  "dependencies": {
-    "dotenv": "^8.2.0"
-  }
+  "dependencies": {}
 }
