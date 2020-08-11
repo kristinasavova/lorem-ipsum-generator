@@ -1,6 +1,6 @@
 # LOREM IPSUM GENERATOR
 
-A simple dynamic site with Node.  
+A simple dynamic site built with Node.  
 
 ## Built With
 
