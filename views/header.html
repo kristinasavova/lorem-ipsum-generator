@@ -44,6 +44,9 @@
                 font: inherit; /* 2 */
             }
         /*-- Base and Layout Rules --*/
+            * {
+                box-sizing: border-box;
+            }
             body {
                 font-family: 'Work Sans', serif;
                 font-size: 18px;
@@ -120,31 +123,43 @@
                 clear: both;
             }
             /*-- Media Queries --*/
+            @media only screen and (min-width: 700px),
+                   only screen and (min-width: 375px) and (orientation: landscape) {
+                    body {
+                        padding: .5em 2.5em;
+                    }
+                    h1 {
+                        font-size: 1.563em;
+                    }
+                    h2 {
+                        font-size: 1.25em;
+                    }
+                    .content-wrapper h1 {
+                        font-size: 1.44em;
+                    }
+                    .content-wrapper h2 {
+                        font-size: 1.2em;
+                    }
+            }
             @media only screen and (min-width: 950px) {
                     h1 {
                         font-size: 2.25em;
                         line-height: 110%;
-                        margin: 1em auto .5em auto;
+                        margin: 1em auto .75em auto;
                     }
                     h2 {
                         font-size: 1.5em;
                         line-height: 125%;
                     }
                     .form-wrapper {
-                        width: 30%;
+                        width: 35%;
                         float: left;
                     }
                     .content-wrapper {
                         width: 60%;
                         float: right;
-                        margin: 1.5em 0 3em 1em;
+                        margin: 1.5em 0 3em 0;
                     }
-                        .content-wrapper h1 {
-                            font-size: 1.44em;
-                        }
-                        .content-wrapper h2 {
-                            font-size: 1.2em;
-                        }
             }
         </style>
     </head>
